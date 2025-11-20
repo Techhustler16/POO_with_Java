@@ -52,4 +52,12 @@ public class Parcours {
     public void setUniteEnseignements(List<UniteEnseignement> uniteEnseignements) {
         this.uniteEnseignements = uniteEnseignements;
     }
+    
+    public void presenterEtablissement() {
+        System.out.print(this.libelle + " --> Etablissements : ");
+        for (Etablissement etablissement : etablissements) {
+            System.out.print(etablissement.getLibelle() + "  ");
+        }
+        System.out.println();
+    }
 }

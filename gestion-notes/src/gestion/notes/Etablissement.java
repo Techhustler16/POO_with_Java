@@ -46,4 +46,11 @@ public class Etablissement {
         this.parcourss = parcourss;
     }
     
+    public void presenterParcours() {
+        System.out.print(this.libelle + " --> Parcours : ");
+        for (Parcours parcours : parcourss) {
+            System.out.print(parcours.getLibelle() + "  ");
+        }
+        System.out.println();
+    }
 }

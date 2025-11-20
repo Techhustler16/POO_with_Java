@@ -37,6 +37,11 @@ public class GestionNotes {
         fds.getParcourss().add(lproGL);
         lproGL.getEtablissements().add(fds);
         
+        epl.presenterParcours();
+        fds.presenterParcours();
+        
+        lproGL.presenterEtablissement();
+        lproSRI.presenterEtablissement();
         /*Etudiant et1 = new Etudiant("KODJO", "Afi", LocalDate.now(), 600235);
         Etudiant et2 = new Etudiant("KOFFI", "Abalo", LocalDate.now(), 600265);
         
