@@ -26,12 +26,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Parcours lproGL = new Parcours(1, "lproGL");
-        lproGL.inscrireEtudiant(new Etudiant("KOSSI", "Kossivi Tinè", LocalDate.now(), 645293));
-        lproGL.inscrireEtudiant(new Etudiant("KOFFI", "Kossi Abalo", LocalDate.now(), 645293));
+//        Parcours lproGL = new Parcours(1, "lproGL");
+//        lproGL.inscrireEtudiant(new Etudiant("KOSSI", "Kossivi Tinè", LocalDate.now(), 645293));
+//        lproGL.inscrireEtudiant(new Etudiant("KOFFI", "Kossi Abalo", LocalDate.now(), 645293));
+        System.out.println("\nBonjour TinosTechnology ");
+        System.out.print("\nTaper votre commande : ");
         while (true) {
-            System.out.println("\nBonjour TinosTechnology ");
-            System.out.print("\nTaper votre commande : ");
             String strCmde = clavier.nextLine();
             Commande commande = parseur.parser(strCmde);
             commande.executer();
