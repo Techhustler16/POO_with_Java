@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package gestion.notes;
+package metier;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +39,14 @@ public class Etudiant {
             moyenneAlgebrique += iUE.getMoyenne();
         }
         return moyenneAlgebrique/sommeCredits;
+    }
+    
+    public static String getHeader(){
+        return "N° \t Carte \t Nom \t Prenom \t Date de Naissance";
+    }
+    
+    public void afficher(){
+        System.out.println(this);
     }
     
     // Accesseurs
@@ -90,4 +98,11 @@ public class Etudiant {
     public void setEtudiant(Ordinateur ordinateur) {
         this.ordinateur = ordinateur;
     }
+
+    @Override
+    public String toString() {
+        return this.numeroCarte + "\t" + this.nom + "\t" + this.prenom + "\t" + this.dateNaissance;
+    }
+    
+    
 }

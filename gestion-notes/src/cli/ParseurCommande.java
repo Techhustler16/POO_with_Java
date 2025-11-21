@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package cli;
+
+/**
+ *
+ * @author tkossi
+ */
+public class ParseurCommande {
+    public Commande parser(String strCommande) {
+        String[] tbCmd = strCommande.trim().split(" ");
+        String premierMot = tbCmd[0].toUpperCase();
+        Commande commande;
+        switch(premierMot) {
+            case "EXIT" :
+                commande = new CmQuitter();
+                break;
+            case "HELP" :
+                commande = new CmAide();
+                break;
+            case "ETU" :
+                commande = new CmListerEtudiantsParcours();
+                break;
+            default :
+                commande = new CmInconnue();
+        }
+        commande.setPararmetres(tbCmd);
+        return commande;
+    }
+}

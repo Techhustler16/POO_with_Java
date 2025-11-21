@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package gestion.notes;
+package metier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,39 @@ import java.util.List;
  * @author tkossi
  */
 public class Parcours {
+    private static List<Parcours> liste = new ArrayList<>();
+    private int id;
     private String libelle;
     private List<Etudiant> etudiants = new ArrayList<>();
     private List<Etablissement> etablissements = new ArrayList<>();
     private List<UniteEnseignement> uniteEnseignements = new ArrayList<>();
     
     public Parcours() {
-    
+        liste.add(this);
     }
     
-    public Parcours(String libelle) {
+    public Parcours(int id, String libelle) {
+        this();
+        this.id = id;
         this.libelle = libelle;
+    }
+    
+    public void inscrireEtudiant(Etudiant etudiant){
+        etudiant.setParcours(this);
+        this.etudiants.add(etudiant);
+    }
+    
+    public void afficher(){
+        System.out.println(this);
+    }
+    
+    public void afficherEtudiant(){
+        int i = 1;
+        System.out.println(Etudiant.getHeader());
+        for(Etudiant etudiant : this.etudiants){
+            System.out.println(i + "\t" + etudiant);
+            i++;
+        }
     }
     
     public String getLibelle (){
@@ -30,6 +52,10 @@ public class Parcours {
     }
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+    
+    public static List<Parcours> getListe(){
+        return liste;
     }
     
     public List<Etudiant> getEtudiants (){
@@ -60,4 +86,10 @@ public class Parcours {
         }
         System.out.println();
     }
+
+    @Override
+    public String toString() {
+        return this.libelle;
+    }
+    
 }
