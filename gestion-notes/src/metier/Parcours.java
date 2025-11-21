@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Parcours {
     private static List<Parcours> liste = new ArrayList<>();
+    private static int sequence = 1;
     private int id;
     private String libelle;
     private List<Etudiant> etudiants = new ArrayList<>();
@@ -27,6 +28,24 @@ public class Parcours {
         this();
         this.id = id;
         this.libelle = libelle;
+    }
+    
+    public Parcours(String libelle) {
+        this(sequence, libelle);
+        sequence = sequence + 1;
+    }
+    
+    public static String getHeader(){
+        return "N° \t Identifiant \t Libelle";
+    }
+    
+    public static void afficherTout(){
+        int i = 1;
+        System.out.println(getHeader());
+        for(Parcours p : liste){
+            System.out.println(i + "\t" + p);
+            i++;
+        }
     }
     
     public void inscrireEtudiant(Etudiant etudiant){
@@ -89,7 +108,7 @@ public class Parcours {
 
     @Override
     public String toString() {
-        return this.libelle;
+        return this.id + "\t" + this.libelle;
     }
     
 }
