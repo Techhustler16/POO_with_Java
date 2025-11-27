@@ -6,7 +6,7 @@ package metier;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class Ordinateur {
     private String marque;

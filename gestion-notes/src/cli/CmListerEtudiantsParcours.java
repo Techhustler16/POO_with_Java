@@ -8,7 +8,7 @@ import metier.Parcours;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class CmListerEtudiantsParcours extends Commande {
 

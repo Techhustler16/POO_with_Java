@@ -6,7 +6,7 @@ package cli;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public abstract class Commande {
     public abstract void executer();

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class CmQuitter extends Commande {
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class Parcours {
     private static List<Parcours> liste = new ArrayList<>();

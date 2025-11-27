@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class UniteEnseignement {
     private String code;

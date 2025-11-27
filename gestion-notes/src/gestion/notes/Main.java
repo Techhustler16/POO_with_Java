@@ -1,23 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package gestion.notes;
 
+package gestion.notes;
 import cli.Commande;
 import cli.ParseurCommande;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import metier.Etablissement;
-import metier.Etudiant;
-import metier.Parcours;
 
 /**
- *
- * @author tkossi
+ * @author Daniel
  */
+
+
 public class Main {
     private static Scanner clavier = new Scanner(System.in);
     private static ParseurCommande parseur = new ParseurCommande();
@@ -29,7 +20,7 @@ public class Main {
 //        Parcours lproGL = new Parcours(1, "lproGL");
 //        lproGL.inscrireEtudiant(new Etudiant("KOSSI", "Kossivi Tinè", LocalDate.now(), 645293));
 //        lproGL.inscrireEtudiant(new Etudiant("KOFFI", "Kossi Abalo", LocalDate.now(), 645293));
-        System.out.println("\nBonjour TinosTechnology ");
+        System.out.println("\nBonjour Daniel     ");
         System.out.print("\nTaper votre commande : ");
         while (true) {
             String strCmde = clavier.nextLine();

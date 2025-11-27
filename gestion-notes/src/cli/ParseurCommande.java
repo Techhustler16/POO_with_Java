@@ -7,8 +7,8 @@ package cli;
 import java.util.Arrays;
 
 /**
- *
- * @author tkossi
+ 
+ * @author Daniel
  */
 public class ParseurCommande {
     public Commande parser(String strCommande) {
@@ -30,6 +30,12 @@ public class ParseurCommande {
                 break;
             case "PARCOURS-AFFICHER" :
                 commande = new CmParcoursAfficher();
+                break;
+            case "ETUDIANT-MODIFIER" :
+                commande = new CmEtudiantModifier();
+                break;
+            case "ETUDIANT-SUPPRIMER" :
+                commande = new CmEtudiantSupprimer();
                 break;
             default :
                 commande = new CmInconnue();

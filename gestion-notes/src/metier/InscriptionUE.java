@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class InscriptionUE {
     private float moyenne;

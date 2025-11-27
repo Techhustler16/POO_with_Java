@@ -4,13 +4,11 @@
  */
 package cli;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import metier.Parcours;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class CmParcoursCreer extends Commande {
     private String libelle;

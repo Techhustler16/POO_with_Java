@@ -6,7 +6,7 @@ package cli;
 
 /**
  *
- * @author tkossi
+ * @author Daniel
  */
 public class CmParcoursModifier extends Commande {
 
