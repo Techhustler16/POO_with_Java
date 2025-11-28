@@ -1,5 +1,5 @@
-
 package gestion.notes;
+
 import cli.Commande;
 import cli.ParseurCommande;
 import java.util.Scanner;
@@ -7,11 +7,11 @@ import java.util.Scanner;
 /**
  * @author Daniel
  */
-
-
 public class Main {
+
     private static Scanner clavier = new Scanner(System.in);
     private static ParseurCommande parseur = new ParseurCommande();
+
     /**
      * @param args the command line arguments
      */
@@ -28,19 +28,18 @@ public class Main {
             commande.executer();
         }
     }
-    
+
     public static void test(String[] ags) {
         //Parcours lproGL = new Parcours("LPro GL");
         //Parcours lproSRI = new Parcours("LPro SRI");
         //Etablissement epl = new Etablissement("EPL", "Ecole Polytechnique de Lomé");
         //Etablissement fds = new Etablissement("FDS", "Faculté Des Sciences");
-        
+
         /*List<Parcours> pcrs = new ArrayList();
         pcrs.add(lproGL);
         pcrs.add(lproSRI);
         epl.setParcourss(pcrs);*/
-        
-        /*epl.getParcourss().add(lproGL);
+ /*epl.getParcourss().add(lproGL);
         lproGL.getEtablissements().add(epl);
         epl.getParcourss().add(lproSRI);
         lproSRI.getEtablissements().add(epl);
@@ -53,7 +52,7 @@ public class Main {
         
         lproGL.presenterEtablissement();
         lproSRI.presenterEtablissement();*/
-        /*Etudiant et1 = new Etudiant("KODJO", "Afi", LocalDate.now(), 600235);
+ /*Etudiant et1 = new Etudiant("KODJO", "Afi", LocalDate.now(), 600235);
         Etudiant et2 = new Etudiant("KOFFI", "Abalo", LocalDate.now(), 600265);
         
         UniteEnseignement poo = new UniteEnseignement("INF 1326", "POO");

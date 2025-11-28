@@ -12,6 +12,7 @@ import java.util.List;
  * @author Daniel
  */
 public class Parcours {
+
     private static List<Parcours> liste = new ArrayList<>();
     private static int sequence = 1;
     private int id;
@@ -19,85 +20,89 @@ public class Parcours {
     private List<Etudiant> etudiants = new ArrayList<>();
     private List<Etablissement> etablissements = new ArrayList<>();
     private List<UniteEnseignement> uniteEnseignements = new ArrayList<>();
-    
+
     public Parcours() {
         liste.add(this);
     }
-    
+
     public Parcours(int id, String libelle) {
         this();
         this.id = id;
         this.libelle = libelle;
     }
-    
+
     public Parcours(String libelle) {
         this(sequence, libelle);
         sequence = sequence + 1;
     }
-    
-    public static String getHeader(){
+
+    public static String getHeader() {
         return "N° \t Identifiant \t Libelle";
     }
-    
-    public static void afficherTout(){
+
+    public static void afficherTout() {
         int i = 1;
         System.out.println(getHeader());
-        for(Parcours p : liste){
+        for (Parcours p : liste) {
             System.out.println(i + "\t" + p);
             i++;
         }
     }
-    
-    public void inscrireEtudiant(Etudiant etudiant){
+
+    public void inscrireEtudiant(Etudiant etudiant) {
         etudiant.setParcours(this);
         this.etudiants.add(etudiant);
     }
-    
-    public void afficher(){
+
+    public void afficher() {
         System.out.println(this);
     }
-    
-    public void afficherEtudiant(){
+
+    public void afficherEtudiant() {
         int i = 1;
         System.out.println(Etudiant.getHeader());
-        for(Etudiant etudiant : this.etudiants){
+        for (Etudiant etudiant : this.etudiants) {
             System.out.println(i + "\t" + etudiant);
             i++;
         }
     }
-    
-    public String getLibelle (){
+
+    public String getLibelle() {
         return this.libelle;
     }
+
     public void setLibelle(String libelle) {
         this.libelle = libelle;
     }
-    
-    public static List<Parcours> getListe(){
+
+    public static List<Parcours> getListe() {
         return liste;
     }
-    
-    public List<Etudiant> getEtudiants (){
+
+    public List<Etudiant> getEtudiants() {
         return this.etudiants;
     }
+
     public void setEtudiants(List<Etudiant> etudiants) {
         this.etudiants = etudiants;
     }
-    
-    public List<Etablissement> getEtablissements (){
+
+    public List<Etablissement> getEtablissements() {
         return this.etablissements;
     }
+
     public void setEtablissements(List<Etablissement> etablissements) {
         this.etablissements = etablissements;
     }
-    
-    public List<UniteEnseignement> getUniteEnseignements (){
+
+    public List<UniteEnseignement> getUniteEnseignements() {
         return this.uniteEnseignements;
     }
+
     public void setUniteEnseignements(List<UniteEnseignement> uniteEnseignements) {
         this.uniteEnseignements = uniteEnseignements;
     }
-    
+
     public void presenterEtablissement() {
         System.out.print(this.libelle + " --> Etablissements : ");
         for (Etablissement etablissement : etablissements) {
@@ -110,5 +115,5 @@ public class Parcours {
     public String toString() {
         return this.id + "\t" + this.libelle;
     }
-    
+
 }

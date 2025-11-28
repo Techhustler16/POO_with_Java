@@ -7,40 +7,41 @@ package cli;
 import java.util.Arrays;
 
 /**
- 
+ *
  * @author Daniel
  */
 public class ParseurCommande {
+
     public Commande parser(String strCommande) {
         String[] tbCmd = strCommande.trim().split(" ");
         String premierMot = tbCmd[0].toUpperCase();
         Commande commande;
-        switch(premierMot) {
-            case "EXIT" :
+        switch (premierMot) {
+            case "EXIT":
                 commande = new CmQuitter();
                 break;
-            case "HELP" :
+            case "HELP":
                 commande = new CmAide();
                 break;
-            case "ETU" :
+            case "ETU":
                 commande = new CmListerEtudiantsParcours();
                 break;
-            case "PARCOURS-CREER" :
+            case "PARCOURS-CREER":
                 commande = new CmParcoursCreer();
                 break;
-            case "PARCOURS-AFFICHER" :
+            case "PARCOURS-AFFICHER":
                 commande = new CmParcoursAfficher();
                 break;
-            case "ETUDIANT-MODIFIER" :
+            case "ETUDIANT-MODIFIER":
                 commande = new CmEtudiantModifier();
                 break;
-            case "ETUDIANT-SUPPRIMER" :
+            case "ETUDIANT-SUPPRIMER":
                 commande = new CmEtudiantSupprimer();
                 break;
-            default :
+            default:
                 commande = new CmInconnue();
         }
-        if (tbCmd.length > 1){
+        if (tbCmd.length > 1) {
             String[] parametres = Arrays.copyOfRange(tbCmd, 1, tbCmd.length);
             commande.setPararmetres(parametres);
         }
